@@ -10,8 +10,6 @@ While True
 	  Invoke()
    Else
 	  Sleep(166)
-	  ; Basic heuristic dodging
-	  ;Sleep(Random(300, 700))
    EndIf
 WEnd
 
@@ -24,12 +22,13 @@ Func Quit()
 EndFunc
 
 Func Invoke()
+; Actions
+
    ; Send key to active window
    ;Send("{SPACE}")
 
    ; Send key directly to window (wherever it is)
    ControlSend("FINAL FANTASY XIV", null, 0, "{SPACE}")
-   Sleep(10000)
 
    ; Autoclicker
    ;MouseClick("left")
@@ -39,6 +38,13 @@ Func Invoke()
    ;Sleep(500)
    ;Send("{w UP}")
 
-   ; Free up cycles
+; Delays
+   ; Delay
+   Sleep(10000)
+
+   ; Basic heuristic dodging delay
+   ;Sleep(Random(300, 700))
+
+   ; Free up cycles (leave this one alone)
    Sleep(1)
 EndFunc
